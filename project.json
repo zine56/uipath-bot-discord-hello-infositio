@@ -7,14 +7,14 @@
     "ScrollActivity": "[1.0.2]",
     "UiPath.Database.Activities": "[1.4.0]",
     "UiPath.System.Activities": "[21.4.0]",
-    "UiPath.UIAutomation.Activities": "[21.4.3]",
+    "UiPath.UIAutomation.Activities": "[21.4.4]",
     "UiPath.WebAPI.Activities": "[1.7.0]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.4.3.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.8",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,

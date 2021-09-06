@@ -7,7 +7,7 @@ function insertText(e,saludo) {
 	$('div[data-slate-object="block"]').click();
 	
 	
-	$('span[data-slate-zero-width="z"]').text(""+saludo+", blep blop - https://bit.ly/3tgcCq1 ");
+	$('span[data-slate-zero-width="z"]').text(""+saludo+", blep blop - bit.ly/3tgcCq1 ");
 		var e = $.Event( "keypress", { which: 13 } );
 	$('span[data-slate-zero-width="z"]').trigger(e);
 	$('span[data-slate-zero-width="z"]').parent().trigger(e);
