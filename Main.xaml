@@ -181,7 +181,7 @@
       </ui:CommentOut.Body>
     </ui:CommentOut>
     <ui:DatabaseConnect DatabaseConnection="[connection]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="934.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=rpa;uid=root;pwd=root" />
-    <ui:ExecuteQuery TimeoutMS="{x:Null}" CommandType="Text" ContinueOnError="False" DataTable="[dt]" DisplayName="Execute Query" ExistingDbConnection="[connection]" sap:VirtualizedContainerService.HintSize="934.666666666667,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT concat(saludo,' (',idioma,')') AS saludo, NOW() AS fecha FROM saludos WHERE 1=1 AND (DAYOFWEEK(NOW()) != 7) AND ( NOT EXISTS (SELECT * FROM feriados WHERE fecha= DATE_FORMAT(NOW(), '%Y%m%d') ) ) ORDER BY RAND() LIMIT 1">
+    <ui:ExecuteQuery TimeoutMS="{x:Null}" CommandType="Text" ContinueOnError="False" DataTable="[dt]" DisplayName="Execute Query" ExistingDbConnection="[connection]" sap:VirtualizedContainerService.HintSize="934.666666666667,87.3333333333333" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="SELECT concat(saludo,' (',idioma,')') AS saludo, NOW() AS fecha FROM saludos WHERE 1=1 AND (DAYOFWEEK(NOW()) != 7) AND (DAYOFWEEK(NOW()) != 1) AND ( NOT EXISTS (SELECT * FROM feriados WHERE fecha= DATE_FORMAT(NOW(), '%Y%m%d') ) ) ORDER BY RAND() LIMIT 1">
       <ui:ExecuteQuery.Parameters>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:ExecuteQuery.Parameters>
@@ -231,7 +231,7 @@
                       </Sequence>
                     </ui:CommentOut.Body>
                   </ui:CommentOut>
-                  <ui:OpenBrowser Hidden="{x:Null}" NewSession="{x:Null}" BrowserType="Edge" CommunicationMethod="Native" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="832,3995.33333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser" Private="False" UiBrowser="[bw]" Url="www.discord.com">
+                  <ui:OpenBrowser Hidden="{x:Null}" NewSession="{x:Null}" BrowserType="Edge" CommunicationMethod="Native" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="436.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser" Private="False" UiBrowser="[bw]" Url="www.discord.com">
                     <ui:OpenBrowser.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
